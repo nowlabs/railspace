@@ -1,0 +1,10 @@
+<%= page_entries_info @specs, :entry_name => 'match' %>
+
+<% if not @specs.empty? %>
+	Found <%= pluralize(@specs.total_entries, "match") %>.
+	<% if @specs.paginated? %>
+		Displaying <%= @specs.first_item %> to <%= @specs.last_item %>
+	<% end %>
+<% else %>
+	Found <%= pluralize(@specs.length, "match") %>
+<% end %>

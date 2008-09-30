@@ -1,0 +1,13 @@
+<h2>
+	<%= link_to 'Back', blog_posts_path(@blog) %>: Edit Post
+</h2>
+
+<%= render :partial => "post" %>
+
+<% form_for [@blog, @post] do |f| %>
+  <fieldset>
+  	<legend>Edit Post</legend>
+  	<%= render :partial => "form", :locals => {:f => f} %>
+  	<%= f.submit "Update", :disable_with => 'Updating...' %>
+  </fieldset>
+<% end %>

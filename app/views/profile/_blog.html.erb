@@ -1,0 +1,12 @@
+<div id="blog">
+	<p>
+		Found <%= pluralize(@posts.total_entries, "blog post") %>.
+		<% if @posts.paginated? %>
+			Displaying <%= @posts.first_item %> to <%= @posts.last_item %>
+		<% end %>
+		<%= render :partial => "posts/post", :collection => @posts %>
+		<div>
+			<%= will_paginate(@posts) %>
+		</div>
+	</p>
+</div>

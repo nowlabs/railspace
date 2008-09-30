@@ -1,0 +1,10 @@
+<h2>Your Blog Posts:</h2>
+
+<%= render :partial => "post", :collection => @posts %>
+<div>
+	<%= will_paginate(@posts) %>
+</div>
+
+<br />
+
+<%= link_to 'New post', new_blog_post_path(@blog) %>

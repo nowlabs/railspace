@@ -1,0 +1,10 @@
+<%= f.error_messages %>
+<%= f.hidden_field :blog_id %>
+<div class="form_row">
+	<%= f.label :title %>
+	<%= f.text_field :title %>
+</div>
+<div class="form_row">
+	<%= f.label :body %>
+	<%= f.text_area :body, :rows => 20, :cols => 60 %>
+</div>

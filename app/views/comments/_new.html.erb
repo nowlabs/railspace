@@ -1,0 +1,11 @@
+<% remote_form_for [@post.blog, @post, @comment] do |form| %>
+	<fieldset>
+		<legend>New Comment</legend>
+		<%= form.text_area :body, :rows => 10, :cols => 40 %>
+		<%= form.submit "Create", :disable_with => 'Saving...' %>
+		<%= button_to_function "Cancel" do |page|
+			page.visual_effect :blind_up, "new_comment_form_for_post_#{@post.id}"
+			page.show "add_comment_link_for_post_#{@post.id}"
+		end %>
+	</fieldset>
+<% end %>

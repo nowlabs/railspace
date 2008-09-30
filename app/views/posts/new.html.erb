@@ -1,0 +1,9 @@
+<h2><%= link_to 'Your Blog Posts', blog_posts_path(@blog) %>: Add a new Post</h2>
+
+<% form_for [@blog, @post] do |f| %>
+	<fieldset>
+		<legend>Blog Post Details</legend>
+		<%= render :partial => "form", :locals => {:f => f} %>
+		<%= f.submit "Create", :disable_with => 'Saving...' %>
+	</fieldset>
+<% end %>

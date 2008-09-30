@@ -1,0 +1,46 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+valid_spec:
+    id: 1
+    user_id: 1
+    first_name: Thomas
+    last_name: Eapen
+    gender: Male
+    birthdate: 1982-11-11
+    occupation: Software Engineer
+    city: Toronto
+    state: ON
+    zip_code: 91125
+
+
+friend_spec:
+    id: 4
+    user_id: 22
+    first_name: Dude
+    last_name: Dude
+    gender: Male
+    birthdate: 1982-12-12
+    occupation: Engineer
+    city: Chennai
+    state: TN
+    zip_code: 91125
+
+
+second_spec:
+    id: 2
+    user_id: 2
+
+blank_spec:
+    id: 3
+    user_id: 3
+    
+
+
+
+#<% (1..10).each do |i| %>
+#spec_<%= i %>:
+#    id: <%= i + 3 %>
+#    user_id: <%= i + 3 %>
+#
+#<% end %>
+    

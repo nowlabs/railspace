@@ -1,0 +1,35 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+valid_user:
+    id: 1
+    screen_name: thomas
+    email: test2@nowlabs.net
+    password: electron
+
+friend:
+    id: 22
+    screen_name: amigo
+    email: test3@nowlabs.net
+    password: Freund
+
+
+invalid_user:
+    id: 2
+    screen_name: aa/noyes
+    email: annoyes@example,com
+    password: sun
+
+specless:
+    id: 3
+    screen_name: linusp
+    email: lpauling@example.com
+    password: 2nobels
+
+<% (1..10).each do |i| %>
+user_<%= i %>:
+    id: <%= i + 3 %>
+    screen_name: user_<%= i %>
+    email: user_<%= i %>@example.com
+    password: foobar
+
+<% end %>

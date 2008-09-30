@@ -1,0 +1,9 @@
+<% if @specs %>
+	<p>
+		<% if not @specs.empty? %>
+			<%= page_entries_info @specs, :entry_name => 'match' %>
+		<% else %>
+			Found <%= pluralize(@specs.length, "match") %>
+		<% end %>
+	</p>
+<% end %>
